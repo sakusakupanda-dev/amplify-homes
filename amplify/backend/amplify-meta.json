@@ -1,0 +1,92 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-kieapp-staging-15329-authRole",
+      "UnauthRoleArn": "arn:aws:iam::711556954185:role/amplify-kieapp-staging-15329-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::711556954185:role/amplify-kieapp-staging-15329-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-kieapp-staging-15329-deployment",
+      "UnauthRoleName": "amplify-kieapp-staging-15329-unauthRole",
+      "StackName": "amplify-kieapp-staging-15329",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:711556954185:stack/amplify-kieapp-staging-15329/f3cb9790-f5e7-11ed-be88-0ae7760abda9",
+      "AmplifyAppId": "d39svgwej6ux5g"
+    }
+  },
+  "api": {
+    "amplifyhomes": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            },
+            "authenticationType": "API_KEY"
+          }
+        },
+        "GraphQLAPIIdOutput": "m77ecbywqzasxm4jf52bdpt67i",
+        "GraphQLAPIEndpointOutput": "https://jjvawwrbjrgalljl3plduactzu.appsync-api.ap-northeast-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-my5zarnzbvecvhauxmghxozuci"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2023-06-09T02:24:08.875Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-kieapp-staging-15329-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiamplifyhomes"
+      }
+    }
+  },
+  "auth": {
+    "kieapp": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-kieapp-staging-15329-deployment/amplify-cfn-templates/auth/kieapp-cloudformation-template.json",
+        "logicalId": "authkieapp"
+      },
+      "lastPushTimeStamp": "2023-06-09T02:24:08.930Z",
+      "output": {
+        "UserPoolId": "ap-northeast-1_7BOzkei0b",
+        "AppClientIDWeb": "7rvnomhb0g67f0raaofklpr3fn",
+        "AppClientID": "6upl96rlpv6s9vu7ijnuhs17i6",
+        "IdentityPoolId": "ap-northeast-1:bec75797-9b8f-42b5-b44b-1fd271e99c87",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-northeast-1:711556954185:userpool/ap-northeast-1_7BOzkei0b",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "kieapp"
+      },
+      "lastPushDirHash": "Xdbk3g1AucnF59HoLkBxfq1BaKQ="
+    }
+  }
+}
